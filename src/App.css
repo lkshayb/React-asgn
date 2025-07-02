@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'work-sans';
+  src: url('./font.ttf') format('truetype');
+  font-style: normal;
+}
