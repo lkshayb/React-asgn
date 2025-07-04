@@ -36,7 +36,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
         id:"group-overview",
         header:() => (
             <div className='flex justify-start gap-2 px-2 '>
-                <div className='text-[#545454] flex gap-1 bg-[#EEEEEE] justify-center items-center w-fit rounded-md py-1 px-1'>
+                <div className='text-[#545454] flex gap-1 bg-[#EEEEEE] justify-center text-xs items-center w-fit rounded-md py-1 px-1'>
                     <img src="Link.svg" alt="" />
                     Q3 Financial Overview
                 </div>
@@ -47,7 +47,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
             {   
                 accessorKey: 'jobRequest',
                 header: () => (
-                    <div className='flex items-center justify-between px-2 py-2 font-semibold text-[#757575] w-[256px]'>
+                    <div className='flex items-center justify-between px-2 py-1 font-semibold text-[#757575] w-[256px]'>
                         <div className='flex gap-1 items-center' >
                             <img src="./Briefcase.svg" className="w-[16px] h-[16px] mx-auto"/>
                             Job Request
@@ -61,7 +61,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
             {
                 accessorKey: 'submitted',
                 header: () => (
-                    <div className='flex items-center justify-between px-2 font-semibold py-2 text-[#757575] w-[131px]'>
+                    <div className='flex items-center justify-between px-2 font-semibold py-1 text-[#757575] w-[131px]'>
                         <div className='flex gap-1 items-center'>
                             <img src="./Calendar.svg" className="w-[16px] h-[16px] mx-auto"/>
                             Submitted
@@ -75,7 +75,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
             {
                 accessorKey:'status',
                 header: () => (
-                    <div className='flex items-center font-semibold justify-between px-2 py-2 text-[#757575] w-[131px]'>
+                    <div className='flex items-center font-semibold justify-between px-2 py-1 text-[#757575] w-[131px]'>
                         <div className='flex gap-1 items-center'>
                             <img src="./Chevron-Circle.svg" className="w-[16px] h-[16px] mx-auto"/>
                             Status
@@ -105,7 +105,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
             },
             {
                 header: () => (
-                    <div className='flex items-center justify-between px-2 py-2  text-[#757575] w-[131px]'>
+                    <div className='flex items-center justify-between px-2 py-1  text-[#757575] w-[131px]'>
                         <div className='flex gap-1 items-center'>
                             <img src="./Person.svg" className="w-[16px] h-[16px] mx-auto"/>
                             Submitter
@@ -134,7 +134,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
             {
                 accessorKey: "url",
                 header: () => (
-                    <div className='flex items-center justify-between px-2 py-2 w-[131px]  text-[#757575]'>
+                    <div className='flex items-center justify-between px-2 py-1 w-[131px]  text-[#757575]'>
                         <div className='flex gap-1 items-center'>
                             <img src="./Globe.svg" className="w-[16px] h-[16px] mx-auto"/>
                             URL
@@ -159,7 +159,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
 
     {   id:"group-abc",
         header:() => (
-            <div className='flex items-center justify-center px-2 py-2 text-[#695149] w-[131px]'>
+            <div className='flex items-center justify-center px-2 py-1 text-[#695149] w-[131px]'>
                 <div className='flex gap-1 items-center'>
                     <img src="./Arrow-Split-2.svg" className='fill-[#A3ACA3]' alt="" />
                     ABC
@@ -171,7 +171,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
             {   
                 accessorKey:"assigned",
                 header:() => (
-                    <div className='flex items-center justify-left px-2 py-2 bg-[#E8F0E9] text-[#666C66] w-[131px]'>
+                    <div className='flex items-center justify-left px-2 py-1 bg-[#E8F0E9] text-[#666C66] w-[131px]'>
                     
                         <div className=' flex gap-1 items-center'>
                             <img src="./Emoji.svg" className="w-[16px] h-[16px] mx-auto"/>
@@ -188,7 +188,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
 
     {   id:"group-ques",
         header: () => (
-            <div className='flex items-center justify-center px-2 py-2  text-[#463E59] w-[100%]'>
+            <div className='flex items-center justify-center px-2 py-1  text-[#463E59] w-[100%]'>
                 <div className='flex gap-1 items-center'>
                     <img src="./Arrow-Split.svg" alt="" />
                     Answer a question
@@ -200,7 +200,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
             {
                 accessorKey: "priority",
                 header: () => (
-                    <div className='px-2 py-2 bg-[#EAE3FC] text-[#655C80] w-[131px]'>
+                    <div className='px-2 py-1 bg-[#EAE3FC] text-[#655C80] w-[131px]'>
                         <div className='flex gap-1 items-center'>
                             Priority
                         </div>  
@@ -225,7 +225,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
             {
                 accessorKey: "dueDate",
                 header: () => (
-                    <div className='px-2 py-2 bg-[#EAE3FC] text-[#655C80] w-[131px]'>
+                    <div className='px-2 py-1 bg-[#EAE3FC] text-[#655C80] w-[131px]'>
                         Due Date 
                     </div>
                 ),
@@ -236,7 +236,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
     
     {   id:"group-val",
         header: () => (
-            <div className='flex items-center justify-center px-2 py-2  text-[#695149] w-[131px]'>
+            <div className='flex items-center justify-center px-2 py-1  text-[#695149] w-[131px]'>
                 <div className='flex gap-1 items-center'>
                     <img src="./Arrow-Split.svg" alt="" />
                     Extract
@@ -250,7 +250,7 @@ export const columns: ColumnDef<JobRequest>[] =  [
                 accessorKey: "estValue",
                 
                 header: () => (
-                    <div className='flex items-center justify-left px-2 py-2 bg-[#FFE9E0] text-[#695149] w-[131px]'>
+                    <div className='flex items-center justify-left px-2 py-1 bg-[#FFE9E0] text-[#695149] w-[131px]'>
                         <div className='flex gap-1 items-center'>
                             Est. Value
                         </div>  
@@ -263,19 +263,20 @@ export const columns: ColumnDef<JobRequest>[] =  [
 
     {   id: "group-add",
         header: () => (
-                <div className='flex items-center justify-center px-2 py-2  text-[#655C80] w-[131px]'>
+                <div className='flex items-center justify-center px-2 py-1  text-[#655C80] w-[131px] '>
                     <img src="Add.svg" alt="" className='h-[20px] w-[20px]'/>  
                 </div>
             ),
+         
         columns: [
             {
                 accessorKey: "+",
                 
                 header: () => (
-                <div className="flex items-center justify-left px-2 py-2 bg-white text-white w-[131px]">
+                <div className="flex items-center justify-left px-2 py-1 bg-white text-white w-[131px]">
                     
                 </div>
-                ),
+                ),   
             },
         ],
     },

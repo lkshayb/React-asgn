@@ -1,9 +1,5 @@
 // App.tsx
-import {
-  useReactTable,
-  getCoreRowModel,
-  flexRender,
-} from "@tanstack/react-table";
+import {useReactTable,getCoreRowModel,flexRender} from "@tanstack/react-table";
 import { data } from "../Table-setup/data";
 import { columns } from "../Table-setup/columns";
 
@@ -13,14 +9,15 @@ function Table() {
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
-  const desiredRowCount = 30; // Set this to your page size or desired row count
+
+  const desiredRowCount = 30; 
   const displayedRows = table.getRowModel().rows;
   const emptyRowsCount = Math.max(0, desiredRowCount - displayedRows.length);
 
   return (
     <div className="font-work">
  
-      <table className=" border border-gray-200">
+      <table className="table-fixed border border-gray-200">
         <thead className="">
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id}>
@@ -55,7 +52,7 @@ function Table() {
                 }
 
                 return (
-                  <th key={header.id} colSpan={header.colSpan} className={`${bgClr} border border-gray-100 text-left text-sm font-medium text-gray-700 `}>
+                  <th key={header.id} colSpan={header.colSpan} className={`${bgClr}   border border-gray-100 text-left text-sm font-medium text-gray-700 `}>
                     {header.isPlaceholder ? null : (
                       <div>
                         {flexRender(header.column.columnDef.header, header.getContext())}
@@ -89,9 +86,9 @@ function Table() {
                 
 
                 return (
-                  <td key={cell.id} className="border border-gray-100 hover:border-green-700 hover:border-[1.6px] py-2  text-xs">
+                  <td key={cell.id} className={`ring-[0.5px] ring-gray-100 hover:ring-green-700 hover:ring-[1px]  py-2  text-xs `}>
                       <div className={`flex ${align} px-2 ` }>
-                          <div className={`truncate overflow-hidden whitespace-nowrap ${w}`}>
+                          <div className={`truncate overflow-hidden whitespace-nowrap ${w} `}>
                             {flexRender(cell.column.columnDef.cell, cell.getContext())}
                           </div>
                       </div>
@@ -102,10 +99,7 @@ function Table() {
           {Array.from({ length: emptyRowsCount }).map((_, idx) => (
             <tr key={`empty-row-${idx}`} className="hover:bg-gray-50">
               {table.getVisibleFlatColumns().map((column, colIdx) => (
-                <td
-                  key={colIdx}
-                  className="text-[#757575] border border-gray-100 hover:border-green-700 hover:border-2 h-9 text-sm text-center"
-                >
+                <td key={colIdx} className={`text-[#757575] ring-[0.5px] ring-gray-100 hover:ring-green-700 hover:ring-[1px] h-8 text-xs text-center ${colIdx > 10 ? "hidden" : ""} `}>
                   {colIdx === 0 ? displayedRows.length + idx + 1 : null}
                 </td>
               ))}

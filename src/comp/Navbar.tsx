@@ -1,6 +1,6 @@
 export default function Navbar(){
     return (
-        <div className="border-b py-2 px-[16px] flex items-center font-work justify-between text-sm">
+        <div className="border-b py-1 px-[16px]  flex items-center font-work justify-between text-xs">
             <div className="flex items-center">
                 <img src="./Panel.svg" alt="Icon" className="w-6 h-6"/>
                 <div className="ml-4 flex gap-[14px] items-center">
@@ -19,10 +19,14 @@ export default function Navbar(){
                         2
                     </span>
                 </div>
-                <div className="w-9 h-9 bg-[url('./profile.png')] bg-cover bg-center rounded-full ml-2"></div>
-                <div className="flex flex-col gap-0 pr-5">
-                    <div>John Doe</div>
-                    <div className="mt-[-6px] text-black/50 text-sm">john.doe...</div>
+                
+                <div className="flex  gap-2 ">
+                    <div className="w-[28px] h-[28px] bg-[url('./profile.png')] bg-cover bg-center rounded-full ml-2"></div>
+                    <div className="flex flex-col gap-0 pr-5">
+                        <div>John Doe</div>
+                        <div className="mt-[-3px] text-black/50 text-xs">john.doe...</div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

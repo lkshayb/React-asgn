@@ -14,7 +14,7 @@ export const data: JobRequest[] = [
     priority: "Medium",
     dueDate: "20-11-2024",
     estValue: "6,200,000 ₹",
-    "+" : " "
+    "+" : ""
   },
   {
     "#" : 2,
@@ -27,7 +27,7 @@ export const data: JobRequest[] = [
     priority: "High",
     dueDate: "30-10-2024",
     estValue: "3,500,000 ₹",
-    "+" : " "
+    "+" : ""
   },
   {
     "#" : 3,
@@ -40,7 +40,7 @@ export const data: JobRequest[] = [
     priority: "Medium",
     dueDate: "10-12-2024",
     estValue: "4,750,000 ₹",
-    "+" : " "
+    "+" : ""
   },
   {
     "#" : 4,
@@ -53,7 +53,7 @@ export const data: JobRequest[] = [
     priority: "Low",
     dueDate: "15-01-2025",
     estValue: "5,900,000 ₹",
-    "+" : " "
+    "+" : ""
     
   },
   {
@@ -67,6 +67,6 @@ export const data: JobRequest[] = [
     priority: "Low",
     dueDate: "30-01-2025",
     estValue: "2,800,000 ₹",
-    "+" : " "
+    "+" : ""
   },
 ];

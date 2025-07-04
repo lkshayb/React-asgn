@@ -1,7 +1,7 @@
 
 export default function Toolbar(){
     return(
-        <div className="border-b py-[5px] pl-[16px] pr-[10px] flex items-center justify-between font-work gap-4 text-sm">
+        <div className="border-b py-[4px] pl-[16px] pr-[10px] flex items-center justify-between font-work gap-4 text-sm">
             <div className="flex items-center gap-4 ">
                 <div className="flex items-center gap-1">
                     <span>Tool bar</span>
@@ -31,19 +31,19 @@ export default function Toolbar(){
                 </div>
             </div>
             <div className="flex gap-2">
-                <button className="flex gap-1 border rounded-lg py-2 pl-2 pr-3 text-[#545454] whitespace-nowrap">
+                <button className="flex gap-1 border rounded-lg py-1 pl-2 pr-3 text-[#545454] whitespace-nowrap">
                     <img src="./Arrow-Download.svg" alt="" />
                     Import
                 </button>
-                <button className="flex gap-1 border rounded-lg py-2 pl-2 pr-3 text-[#545454] whitespace-nowrap">
+                <button className="flex gap-1 border rounded-lg py-1 pl-2 pr-3 text-[#545454] whitespace-nowrap">
                     <img src="./Arrow-Upload.svg" alt="" />
                     Export
                 </button>
-                <button className="flex gap-1 border rounded-lg py-2 pl-2 pr-3 text-[#545454] whitespace-nowrap">
+                <button className="flex gap-1 border rounded-lg py-1 pl-2 pr-3 text-[#545454] whitespace-nowrap">
                     <img src="./Share.svg" alt="" />
                     Share
                 </button>
-                <button className=" flex gap-1 rounded-lg py-2 pl-2 pr-3 text-white bg-[#4B6A4F] whitespace-nowrap">
+                <button className=" flex gap-1 rounded-lg py-1 pl-2 pr-3 text-white bg-[#4B6A4F] whitespace-nowrap">
                     <img src="./Arrow-Split.svg" alt="" />
                     <p className="flex">New Action</p>
                 </button>
