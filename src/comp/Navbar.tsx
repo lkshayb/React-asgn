@@ -27,7 +27,7 @@ export default function Navbar(){
                 </button>
                 
                 <button onClick={() => console.log("User Profile")} className="flex  gap-2 ">
-                    <div  className="w-[28px] h-[28px] bg-[url('./profile.png')] bg-cover bg-center rounded-full ml-2"></div >
+                    <div  className="w-[28px] h-[28px] bg-[url('./profile.svg')] bg-cover bg-center rounded-full ml-2"></div >
                     <div className="flex flex-col gap-0 pr-5">
                         <div>John Doe</div>
                         <div className="mt-[-3px] text-black/50 text-xs">john.doe...</div>
