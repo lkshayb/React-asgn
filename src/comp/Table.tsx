@@ -3,11 +3,12 @@ import {useReactTable,getCoreRowModel,flexRender} from "@tanstack/react-table";
 import { data } from "../Table-setup/data";
 import { columns } from "../Table-setup/columns";
 
-function Table() {
+function Table({togglefields} : {togglefields : boolean}) {
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    
   });
 
   const desiredRowCount = 30; 
@@ -23,36 +24,18 @@ function Table() {
             <tr key={headerGroup.id}>
               {headerGroup.headers.map(header => {
                 let bgClr = "bg-[#EEEEEE]";
-                const accessor = header.column.columnDef.accessorKey;
                 const id = header.column.id;
-
-                if (accessor === "assigned") {
-                  bgClr = "bg-[#E8F0E9]"
-                }
-                else if (accessor === "priority" || accessor === "dueDate") {
-                  bgClr = "bg-[#EAE3FC]"
-                }
-                else if (id === "+") {
-                  bgClr = "bg-white"
-                }
-                else if (id === "group-ques" ){
-                  bgClr = "bg-[#DCCFFC]"
-                }
-                else if(id === "group-abc"){
-                  bgClr = "bg-[#D2E0D4]"
-                }
-                else if(id === "group-val"){
-                  bgClr = "bg-[#FAC2AF]"
-                }
-                else if (id === "group-url"){
-                  bgClr = "bg-[#ffffff]"
-                }
-                else if (id === "group-overview"){
-                  bgClr = "bg-[#E2E2E2]"
-                }
-
+                if (id === "assigned") bgClr = "bg-[#E8F0E9]"
+                else if (id === "priority" || id === "dueDate") bgClr = "bg-[#EAE3FC]"
+                else if (id === "+") bgClr = "bg-white"
+                else if (id === "group-ques" ) bgClr = "bg-[#DCCFFC]"
+                else if(id === "group-abc") bgClr = "bg-[#D2E0D4]"
+                else if(id === "group-val") bgClr = "bg-[#FAC2AF]"
+                else if (id === "group-url") bgClr = "bg-[#ffffff]"
+                else if (id === "group-overview") bgClr = "bg-[#E2E2E2]"
+                
                 return (
-                  <th key={header.id} colSpan={header.colSpan} className={`${bgClr}   border border-gray-100 text-left text-sm font-medium text-gray-700 `}>
+                  <th key={header.id} colSpan={header.colSpan} className={`${bgClr}  ${togglefields ? "" : "hidden"} border border-gray-100 text-left text-sm font-medium text-gray-700 `}>
                     {header.isPlaceholder ? null : (
                       <div>
                         {flexRender(header.column.columnDef.header, header.getContext())}
@@ -70,20 +53,18 @@ function Table() {
               {row.getVisibleCells().map(cell => {
                 let align = "justify-center";
                 let w = "max-w-[131px]"
-                const accessor = cell.column.columnDef.accessorKey;
                 const id = cell.column.id;
-                
-                if(accessor === "submitter" || accessor === "assigned" || accessor=== "url"){
+
+                if(id === "submitter" || id === "assigned" || id=== "url"){
                   align = "justify-start"
                 }
-                else if(accessor === "submitted" || accessor === "dueDate" || accessor === "estValue"){
+                else if(id === "submitted" || id === "dueDate" || id === "estValue"){
                   align = "justify-end"
                 }
-                else if(accessor === "jobRequest"){
+                else if(id === "jobRequest"){
                   align = "justify-start"
                   w = "max-w-[240px]"
                 }
-                
 
                 return (
                   <td key={cell.id} className={`ring-[0.5px] ring-gray-100 hover:ring-green-700 hover:ring-[1px]  py-2  text-xs `}>
@@ -98,7 +79,7 @@ function Table() {
           ))}
           {Array.from({ length: emptyRowsCount }).map((_, idx) => (
             <tr key={`empty-row-${idx}`} className="hover:bg-gray-50">
-              {table.getVisibleFlatColumns().map((column, colIdx) => (
+              {table.getVisibleFlatColumns().map((_, colIdx) => (
                 <td key={colIdx} className={`text-[#757575] ring-[0.5px] ring-gray-100 hover:ring-green-700 hover:ring-[1px] h-8 text-xs text-center ${colIdx > 10 ? "hidden" : ""} `}>
                   {colIdx === 0 ? displayedRows.length + idx + 1 : null}
                 </td>
