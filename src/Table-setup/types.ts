@@ -9,5 +9,5 @@ export type JobRequest = {
     priority: string;
     dueDate: string;
     estValue: string;
-    "+" : any
+    "+" : string
 };
